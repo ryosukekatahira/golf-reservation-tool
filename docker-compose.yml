@@ -1,5 +1,6 @@
 services:
   app:
+    container_name: "golf-app"
     build:
       context: .
       dockerfile: Dockerfile
@@ -11,6 +12,7 @@ services:
       - db
 
   db:
+    container_name: "golf-mysql"
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: root
